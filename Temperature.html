@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>length Converter</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body {
+            align-items: center;
+            background-color: rgba(153, 205, 50, 0.811);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgba(226, 43, 43, 0.774);
+            text-decoration: underline rgba(64, 43, 226, 0.705);
+            background-color: yellowgreen;
+            padding: 15px;
+            border: 1.4px solid black;
+            border-radius: 15px;
+            margin: 3px 3px;
+            font-family: cursive;
+        }
+
+        h1:hover {
+            border: 2px solid rgba(226, 43, 43, 0.774);
+        }
+
+        #flex {
+            display: flex;
+            background-color: yellowgreen;
+            border: 3px solid black;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 150px 100px;
+        }
+
+        #flex:hover {
+            border: 4px solid rgba(226, 43, 43, 0.774);
+        }
+
+        .style {
+            background-color: rgba(191, 255, 0, 0.89);
+            border: 1.5px solid black;
+            border-radius: 5px;
+            padding: 2px 0px;
+            color: black;
+            font-family: cursive;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .style:hover {
+            border: 3px solid rgba(226, 43, 43, 0.774);
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        button {
+            background-color: rgba(191, 255, 0, 0.89);
+            border: 1.5px solid black;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: black;
+            font-family: cursive;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        button:hover {
+            border: 3px solid rgba(226, 43, 43, 0.774);
+        }
+
+        #space {
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Temperature converter</h1>
+    <div id="flex">
+        <div>
+            <select class="style" id="from">
+                <option>Celsius</option>
+                <option>Farnheit</option>
+                <option>kelvin</option>
+            </select>
+            <br><br><br>
+            <select class="style" id="to">
+                <option>Celsius</option>
+                <option>Farnheit</option>
+                <option>kelvin</option>
+            </select>
+        </div>
+        <div id="space"></div>
+        <div>
+            <input type="text" value="enter Degrees" class="style" id="input" onclick="replace()">
+            <br><br><br>
+            <button id="submit" onclick="check(),disable()">submit</button>
+            <button onclick="clean(),enable()">clear</button>
+        </div>
+    </div>
+    <h3 class="style" id="value">value:</h3>
+</body>
+<script src="Temperature.js"></script>
+
+</html>
